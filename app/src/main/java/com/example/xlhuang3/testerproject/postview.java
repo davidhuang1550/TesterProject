@@ -19,7 +19,7 @@ public class postview extends AppCompatActivity {
     Post post;
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
-
+    Button Search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,17 @@ public class postview extends AppCompatActivity {
         Description.setText(post.getDescription());
         yes = (Button)findViewById(R.id.yes);
         No = (Button)findViewById(R.id.no);
+
+     /*   Search = (Button)findViewById(R.id.searchButton);
+        Search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().add(R.id.searchView,new SearchFragment()).commit();
+
+            }
+        });
+*/
+
 
         firebaseAuth= FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();

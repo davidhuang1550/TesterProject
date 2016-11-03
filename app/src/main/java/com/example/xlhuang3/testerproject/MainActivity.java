@@ -2,6 +2,7 @@ package com.example.xlhuang3.testerproject;
 
 import android.content.Context;
 import android.provider.ContactsContract;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,14 +32,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Search = (Button)findViewById(R.id.searchButton);
+       /* Search = (Button)findViewById(R.id.searchButton);
         Search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                getFragmentManager().beginTransaction().add(R.id.postview,new SearchFragment());
 
             }
-        });
+        });*/
+
 
         firebaseAuth= FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();

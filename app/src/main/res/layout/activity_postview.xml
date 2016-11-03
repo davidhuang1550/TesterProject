@@ -53,6 +53,6 @@
         android:layout_alignLeft="@+id/yes"
         android:layout_alignStart="@+id/yes"
         android:layout_above="@+id/yes"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:layout_alignRight="@+id/no"
+        android:layout_alignEnd="@+id/no" />
 </RelativeLayout>
