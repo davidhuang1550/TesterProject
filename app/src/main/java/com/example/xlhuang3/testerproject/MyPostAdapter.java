@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -48,7 +49,7 @@ public class MyPostAdapter extends BaseAdapter{
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(),postview.class);
-                intent.putExtra("Post",posts.get(i));
+                intent.putExtra("Post_Object",(Serializable)posts.get(i));
                 if (intent.resolveActivity(context.getPackageManager()) != null) {
                     context.startActivity(intent);
                 }

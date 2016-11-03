@@ -85,4 +85,10 @@ public class Post implements Serializable{
     public void setKey(String key) {
         this.key = key;
     }
+    public void IncNo(){
+        No++;
+    }
+    public void IncYes(){
+        Yes++;
+    }
 }

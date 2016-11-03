@@ -5,6 +5,8 @@ import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -22,18 +24,28 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
     ArrayList<Post> posts;
+    Button Search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Search = (Button)findViewById(R.id.searchButton);
+        Search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
+
         firebaseAuth= FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         posts =new ArrayList<Post>();
         databaseReference.child("Sub").child("Soccer").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
+                posts.clear();
                 for(DataSnapshot s: dataSnapshot.getChildren()){
                     Post p= s.getValue(Post.class);
                     p.setKey(s.getKey());

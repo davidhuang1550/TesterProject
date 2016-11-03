@@ -17,5 +17,42 @@
         android:id="@+id/PostTitle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:textSize="40dp"
         android:layout_marginTop="35dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:id="@+id/yes"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="68dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:id="@+id/no"
+        android:layout_marginRight="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_alignTop="@+id/yes"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/PostDesc"
+        android:layout_marginTop="62dp"
+        android:layout_below="@+id/PostTitle"
+        android:layout_alignLeft="@+id/yes"
+        android:layout_alignStart="@+id/yes"
+        android:layout_above="@+id/yes"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2" />
 </RelativeLayout>
